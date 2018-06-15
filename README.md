@@ -3,7 +3,7 @@
 This Node.js app was created to facilitate the authorization of users registered on an Azure Active Directory with Meraki wireless infrastructures. Instead of using a RADIUS server for the authentication, you can spin up a web server that will be serving as your Captive Portal, which will then authenticate the user using OAuth
 
 ## References
-This application and the step by step below were created / cloned based on the code provided by Microsoft, hosted [here](https://github.com/AzureADQuickStarts/WebApp-OpenIDConnect-NodeJS). Additionally, the information available at Meraki's [documentation](https://create.meraki.io/build/captive-portal-with-client-side-javascript/) about building your own JavaScript captive portal. For the sake of simplicity, I removed any references to MongoDB, but if you want to store user information somewhere, the original service provided by Azure gives you that flexibility.
+This application and the step by step below were created / cloned based on the code provided by Microsoft, hosted [here](https://github.com/AzureADQuickStarts/WebApp-OpenIDConnect-NodeJS). Additionally, the information available at Meraki's [documentation](https://create.meraki.io/build/captive-portal-with-client-side-javascript/) about building your own JavaScript captive portal. For the sake of simplicity, I removed any MongoDB action, but if you want to store user information somewhere, the original service provided by Azure gives you that flexibility.
 
 ## Quick Start
 In order to work with Meraki's captive portal, your server will need to run on a publicly available IP, i.e., you will need to host it out in the Internet. There are several alternatives to address this. For development purposes, I recommend using ngrok, which will create introspectable tunnels to your localhost. For production environments, I'd use Heroku, which is a PAAS that has a free tier of service. For the Heroku option, I'm including the required configuration file (ProcFile). 
@@ -38,7 +38,7 @@ The steps below were copied from Meraki's official documentation [Configuring a 
 * Select the SSID you want to configure from the SSID drop-down.
 * Under Custom splash URL select the radio button Or provide a URL where users will be redirected:
 * Type the URL of your custom splash page:
-	`http://public-url.example.com`
+	`http://public-url.example.com/login`
 * Click Save Changes.
 
 ## Azure Setup
@@ -56,7 +56,7 @@ Next, clone the sample repo and install the NPM.
 
 From your shell or command line:
 
-* `$ clone this git https://github.com/rafael-carvalho/meraki-aad-auth`
+* `$ clone this git https://github.com/rafael-carvalho/meraki-azure-ad`
 * `$ npm install`
 
 ### Step 4: Configure your server
