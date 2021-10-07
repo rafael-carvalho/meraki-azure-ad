@@ -1,3 +1,5 @@
+### This repo is no longer monitored / maintained.
+
 # Meraki Captive Portal with Azure Active Directory 
 
 This Node.js app was created to facilitate the authorization of users registered on an Azure Active Directory with Meraki wireless infrastructures. Instead of using a RADIUS server for the authentication, you can spin up a web server that will be serving as your Captive Portal, which will then authenticate the user using OAuth
